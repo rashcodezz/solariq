@@ -1,1 +1,15 @@
 node_modules/ 
+# =========================
+# Python / Flask
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.env.*
+instance/
+
+# =========================
+#
