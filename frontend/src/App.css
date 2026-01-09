@@ -1,0 +1,203 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background-color: #f3f4f6;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.app-header {
+   padding: 16px 24px 8px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.app-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 1.2fr); /* a bit wider right side */
+  gap: 24px;
+  padding: 24px 32px 32px;
+  /* make it use full width */
+  max-width: 100%;
+  margin: 0;
+}
+
+.map-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.card-title {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.card-highlight {
+  border-color: #22c55e33;
+  background: linear-gradient(135deg, #ecfdf3, #ffffff);
+}
+
+.map-wrapper {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+.map-container,
+.leaflet-container {
+  width: 100% !important;
+  height: 480px;
+}
+
+
+
+.location-text {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.location-text span {
+  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.form-row label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.form-row input {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-row input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px #22c55e33;
+}
+
+.primary-button {
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, opacity 0.1s;
+}
+
+.primary-button:hover {
+  box-shadow: 0 8px 16px rgba(22, 163, 74, 0.4);
+  transform: translateY(-1px);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+  opacity: 0.9;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.metric span {
+  color: #6b7280;
+}
+
+.metric strong {
+  color: #111827;
+}
+
+.metric-muted {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
